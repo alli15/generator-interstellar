@@ -7,7 +7,7 @@ var os      = require('os');
 
 describe('mcs:app', function () {
   before(function (done) {
-    helpers.run(path.join(__dirname, '../app'))
+    helpers.run(path.join(__dirname, '../generators/app'))
       .withArguments('test-app', '--force')
       .inDir(path.join(os.tmpdir(), './temp-test'))
       .on('end', done);

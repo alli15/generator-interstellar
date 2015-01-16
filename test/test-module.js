@@ -6,7 +6,7 @@ var helpers = require('yeoman-generator').test;
 
 describe('Mcs:module', function () {
   before(function (done) {
-    helpers.run(path.join(__dirname, '../module'))
+    helpers.run(path.join(__dirname, '../generators/module'))
       .withArguments('test-name', '--force')
       .withOptions({ 'skip-install': true })
       .on('end', done);
