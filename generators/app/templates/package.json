@@ -1,0 +1,13 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Modular Client System sample app",
+  "author": "Stellar Development Foundation <stellar@stellar.org>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "mcs-core": "git+https://github.com/stellar/mcs-core.git#master",
+    "mcs-stellard": "git+https://github.com/stellar/mcs-stellard.git#master",
+    "stellar-base": "0.0.11"
+  }
+}

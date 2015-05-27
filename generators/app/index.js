@@ -12,49 +12,26 @@ module.exports = yeoman.generators.NamedBase.extend({
       "controllers", 
       "directives", 
       "templates", 
-      "filters",
-      "setup-blocks",
+      "filters"
     ];
 
     var self = this;
 
     _.each(gitKeeps, function(type) {
-      self.fs.copy(
-        self.templatePath("gitkeep"),
-        self.destinationPath("apps/" + self.name + "/" + type + "/.gitkeep")
-      );
+      self.fs.write(type + "/.gitkeep", '');
     });
 
     self.fs.copyTpl(
-      self.templatePath("main.es6"),
-      self.destinationPath("apps/" + self.name + "/main.es6"),
-      { name: self.name }
-    );
-
-    self.fs.copyTpl(
-      self.templatePath("head.es6"),
-      self.destinationPath("apps/" + self.name + "/head.es6"),
-      { name: self.name }
-    );
-
-    self.fs.copyTpl(
-      self.templatePath("README.md"),
-      self.destinationPath("apps/" + self.name + "/README.md"),
-      { name: self.name }
-    );
-
-    self.fs.copyTpl(
-      self.templatePath("index.html"),
-      self.destinationPath("apps/" + self.name + "/index.html"),
-      { name: self.name }
-    );
-
-    self.fs.copyTpl(
-      self.templatePath("main.scss"),
-      self.destinationPath("apps/" + self.name + "/main.scss"),
+      self.templatePath("**/*"),
+      self.destinationPath(),
       { name: self.name }
     );
   },
 
-  install: function () {}
+  install: function () {
+    this.installDependencies({
+      skipMessage: this.options['skip-install-message'],
+      skipInstall: this.options['skip-install']
+    });
+  }
 });

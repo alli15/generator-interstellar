@@ -15,17 +15,16 @@ describe('mcs:app', function () {
 
   it('creates files', function () {
     assert.file([
-      "apps/test-app/index.html",
-      "apps/test-app/main.es6",
-      "apps/test-app/main.scss",
-      "apps/test-app/README.md",
-      "apps/test-app/head.es6",
-      "apps/test-app/controllers/.gitkeep",
-      "apps/test-app/services/.gitkeep",
-      "apps/test-app/directives/.gitkeep",
-      "apps/test-app/setup-blocks/.gitkeep",
-      "apps/test-app/templates/.gitkeep",
-      "apps/test-app/filters/.gitkeep",
+      "index.html",
+      "main.es6",
+      "main.scss",
+      "README.md",
+      "head.es6",
+      "controllers/.gitkeep",
+      "services/.gitkeep",
+      "directives/.gitkeep",
+      "templates/.gitkeep",
+      "filters/.gitkeep"
     ]);
   });
 });
