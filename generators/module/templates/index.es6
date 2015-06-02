@@ -1,13 +1,18 @@
+import {Module} from "mcs-core";
 
-const { Module } = require("mcs");
+const mod = new Module('<%= name %>');
+export default mod;
 
-export const mod = new Module('<%= name %>');
+app.controllers = require.context("./controllers", true);
+app.directives = require.context("./directives", true);
+app.templates = require.context("raw!./templates", true);
 
-mod.templates    = require.context("raw!./templates", true);
-mod.services     = require.context("./services",      true);
-mod.controllers  = require.context("./controllers",   true);
-mod.directives   = require.context("./directives",    true);
-mod.filters      = require.context("./filters",       true);
-mod.setupBlocks  = require.context("./setup-blocks",  true);
+let addConfig = ConfigProvider => {
+  ConfigProvider.addModuleConfig(mod.name, {
+    amount: 1000
+  });
+};
+addConfig.$inject = ['mcs-core.ConfigProvider'];
+mod.config(addConfig);
 
 mod.define();

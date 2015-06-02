@@ -13,35 +13,32 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: function () {
     var gitKeeps = [
-      "services", 
-      "controllers", 
-      "directives", 
-      "templates", 
-      "filters",
-      "setup-blocks",
+      "services",
+      "controllers",
+      "directives",
+      "templates",
+      "styles",
+      "filters"
     ];
 
     var self = this;
 
     _.each(gitKeeps, function(type) {
-      self.fs.copy(
-        self.templatePath("gitkeep"),
-        self.destinationPath("modules/" + self.name + "/" + type + "/.gitkeep")
-      );
+      self.fs.write(type + "/.gitkeep", '');
     });
 
     self.fs.copyTpl(
-      self.templatePath("index.es6"),
-      self.destinationPath("modules/" + self.name + "/index.es6"),
-      { name: this.name }
+      self.templatePath("**/*"),
+      self.destinationPath(),
+      { name: self.name }
     );
+  },
 
-    self.fs.copyTpl(
-      self.templatePath("README.md"),
-      self.destinationPath("modules/" + self.name + "/README.md"),
-      { name: this.name }
-    );
-
+  install: function () {
+    this.installDependencies({
+      skipMessage: this.options['skip-install-message'],
+      skipInstall: this.options['skip-install']
+    });
   }
 });
 
