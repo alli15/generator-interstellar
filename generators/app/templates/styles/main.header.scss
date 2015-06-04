@@ -1,7 +1,7 @@
-// kelp-library-bundle
-@import "kelp/lib/index";
-@import "kelp-theme-sdf/lib/index";
+// solar-library-bundle
+@import "solar/lib/index";
+@import "solar-stellarorg/lib/index"; // uncomment to see how solar-stellarorg theme impacts the styles
 
-// kelp-css-bundle
-@import "kelp/styles/index";
-@import "kelp-theme-sdf/styles/index";
+// solar-css-bundle
+@import "solar/styles/index";
+@import "solar-stellarorg/styles/index"; // uncomment to see how solar-stellarorg theme impacts the styles

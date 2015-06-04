@@ -3,14 +3,18 @@ require("file?name=index.html!./index.html");
 require('./styles/main.header.scss');
 require('./styles/main.footer.scss');
 
-import mcsCore, {App, Inject, Intent} from "mcs-core";
-import mcsStellard from "mcs-stellard";
+import interstellarCore, {App, Inject, Intent} from "interstellar-core";
+import interstellarSessions from "interstellar-sessions";
+import interstellarNetwork from "interstellar-network";
+import interstellarNetworkWidgets from "interstellar-network-widgets";
 
 let config = require('./config.json');
 export const app = new App("<%= name %>", config);
 
-app.use(mcsCore.name);
-app.use(mcsStellard.name);
+app.use(interstellarCore);
+app.use(interstellarSessions);
+app.use(interstellarNetwork);
+app.use(interstellarNetworkWidgets);
 
 app.controllers = require.context("./controllers", true);
 app.templates = require.context("raw!./templates", true);
@@ -32,7 +36,7 @@ let registerBroadcastReceivers = ($state, IntentBroadcast) => {
     $state.go('balance');
   });
 };
-registerBroadcastReceivers.$inject = ["$state", "mcs-core.IntentBroadcast"];
+registerBroadcastReceivers.$inject = ["$state", "interstellar-core.IntentBroadcast"];
 app.run(registerBroadcastReceivers);
 
 app.bootstrap();

@@ -1,10 +1,10 @@
 {
-  "name": "generator-mcs",
+  "name": "generator-interstellar",
   "version": "0.0.0",
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "stellar/generator-mcs",
+  "repository": "stellar/generator-interstellar",
   "author": {
     "name": "Scott Fleckenstein",
     "email": "nullstyle@gmail.com",

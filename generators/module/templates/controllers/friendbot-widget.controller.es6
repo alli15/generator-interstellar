@@ -1,6 +1,8 @@
 require('../styles/friendbot-widget.scss');
 
-@Inject("$scope", "mcs-core.Config", "mcs-stellard.Sessions", "mcs-stellard.Server")
+import {Inject} from "interstellar-core";
+
+@Inject("$scope", "interstellar-core.Config", "interstellar-sessions.Sessions", "interstellar-network.Server")
 class FriendbotWidgetController {
   constructor($scope, Config, Sessions, Server) {
     if (!Sessions.hasDefault()) {
@@ -15,7 +17,7 @@ class FriendbotWidgetController {
 
   friendbot() {
     this.Server.friendbot(this.session.getAddress(), {
-        amount: Config.get('modules.mcs-friendbot.amount')
+        amount: this.Config.get('modules.<%= name %>.amount')
       }).then(() => {
         this.$scope.$apply();
       })

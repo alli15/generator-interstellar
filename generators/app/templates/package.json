@@ -6,8 +6,10 @@
   "author": "Stellar Development Foundation <stellar@stellar.org>",
   "license": "Apache-2.0",
   "dependencies": {
-    "mcs-core": "git+https://github.com/stellar/mcs-core.git#master",
-    "mcs-stellard": "git+https://github.com/stellar/mcs-stellard.git#master",
+    "interstellar-core": "git+https://github.com/stellar/interstellar-core.git#master",
+    "interstellar-sessions": "git+https://github.com/stellar/interstellar-sessions.git#master",
+    "interstellar-network": "git+https://github.com/stellar/interstellar-network.git#master",
+    "interstellar-network-widgets": "git+https://github.com/stellar/interstellar-network-widgets.git#master",
     "stellar-base": "0.0.11"
   }
 }

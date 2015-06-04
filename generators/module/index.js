@@ -2,14 +2,8 @@
 var yeoman = require('yeoman-generator');
 var _      = require("lodash");
 
-module.exports = yeoman.generators.Base.extend({
-  initializing: function () {
-    this.argument('name', {
-      required: true,
-      type: String,
-      desc: 'The module name'
-    });
-  },
+module.exports = yeoman.generators.NamedBase.extend({
+  initializing: function () {},
 
   writing: function () {
     var gitKeeps = [
@@ -22,6 +16,7 @@ module.exports = yeoman.generators.Base.extend({
     ];
 
     var self = this;
+    console.log(self.name);
 
     _.each(gitKeeps, function(type) {
       self.fs.write(type + "/.gitkeep", '');

@@ -1,7 +1,7 @@
 let friendbotWidget = function () {
   return {
     restrict: "E",
-    templateUrl: "<% name %>/friendbot-widget"
+    templateUrl: "<%= name %>/friendbot-widget"
   }
 };
 

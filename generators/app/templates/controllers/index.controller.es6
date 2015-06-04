@@ -1,7 +1,7 @@
-import {Inject, Intent} from 'mcs-core';
+import {Inject, Intent} from 'interstellar-core';
 import {Keypair} from 'stellar-base';
 
-@Inject("mcs-core.Config", "mcs-core.IntentBroadcast", "mcs-stellard.Sessions")
+@Inject("interstellar-core.Config", "interstellar-core.IntentBroadcast", "interstellar-sessions.Sessions")
 class IndexController {
   constructor(Config, IntentBroadcast, Sessions) {
     this.IntentBroadcast = IntentBroadcast;

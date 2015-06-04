@@ -4,7 +4,7 @@ var path = require('path');
 var assert = require('yeoman-generator').assert;
 var helpers = require('yeoman-generator').test;
 
-describe('Mcs:module', function () {
+describe('interstellar:module', function () {
   before(function (done) {
     helpers.run(path.join(__dirname, '../generators/module'))
       .withArguments('test-name', '--force')

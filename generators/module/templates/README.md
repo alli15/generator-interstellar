@@ -1,10 +1,11 @@
 # `<%= name %>`
 
-The `<%= name %>` is part of the Modular Client System.
+The `<%= name %>` is part of the Interstellar Module System.
 
-> Quick start to developing in the MCS eco-system:
+> Quick start to developing in the Interstellar eco-system:
 >
-> * Install [`mcs-workspace`](https://github.com/stellar/mcs-workspace).
+> * Read [`Getting started`](https://github.com/stellar/interstellar/tree/master/docs) doc.
+> * Install [`interstellar-workspace`](https://github.com/stellar/interstellar-workspace).
 > * Read the technical overview of the system.
 > * Contribute to our open-source modules or develop your own.
 
@@ -16,7 +17,7 @@ The `<%= name %>` is part of the Modular Client System.
 }
 ```
 
-Read more about [modules configuration](https://github.com/stellar/mcs-core#mcs-coreconfig-service).
+Read more about [modules configuration](https://github.com/stellar/interstellar-core#interstellar-coreconfig-service).
 
 ## Module contents
 
