@@ -1,6 +1,6 @@
 # generator-interstellar
 
-> [Yeoman](http://yeoman.io) generator
+This is a [Yeoman](http://yeoman.io) generator for bootstrapping [Interstellar](https://github.com/stellar/interstellar) applications. For more information, read ["getting started"](https://github.com/stellar/interstellar/tree/master/docs).
 
 
 ## Getting Started
